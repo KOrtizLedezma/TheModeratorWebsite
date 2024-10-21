@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text: #7289da;
+  --buttons: #7289da;
+  --text-second: #FFFFFF;
+  --buttons-hover: #5067B8;
+  --header-bckg: #1e2124;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #282b30;
+  }
+}
+
+body {
+  color: var(--text-second);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--header-bckg);
+  z-index: 10;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text);
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: var(--text-second);
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ccc;
+}
+
+.page-design {
+  background-color: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text);
+  font-size: 10vh;
+  font-weight: bold;
+}
+
+.qr-container {
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+}
+
+.buttons-design {
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.button {
+  color: var(--text-second);
+  font-size: 20px;
+  font-weight: bold;
+  background-color: var(--buttons);
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--buttons-hover);
+}
+
+.content {
+  padding: 20px;
+  text-align: center;
+}
+
+.commands-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 16px;
+  text-align: left;
+}
+
+.commands-table th, .commands-table td {
+  padding: 12px;
+  border: 1px solid var(--text-second);
+}
+
+.commands-table th {
+  background-color: var(--buttons-hover);
+  color: var(--text-second);
+}
+
+.commands-table tbody tr:nth-child(even) {
+  background-color: var(--header-bckg);
+}
+
+.commands-table td:nth-child(3) {
+  text-align: center;
+}
+
+.help-title{
+  font-size: 5vh;
+  font-weight: bold;
+  color: var(--text);
+  text-align: center;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+  transition: color 0.3s ease;
+}
+
+button:hover {
+  color: var(--buttons-hover);
+}
+
+button:focus {
+  outline: none;
+}
