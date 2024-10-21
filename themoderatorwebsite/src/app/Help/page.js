@@ -60,7 +60,7 @@ export default function Help() {
             </tr>
             <tr>
               <td><code>!ping</code></td>
-              <td>Replies with "Pong!" to check if the bot is responsive.</td>
+              <td>Replies with `&quot;`Pong!`&quot;` to check if the bot is responsive.</td>
               <td>
                 <button onClick={() => copyToClipboard('!ping')}>
                   <FaRegCopy size={20} />
